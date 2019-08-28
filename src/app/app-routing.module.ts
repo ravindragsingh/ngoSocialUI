@@ -7,6 +7,7 @@ import { EventsComponent } from './slider/events/events.component';
 import { NewsComponent } from './slider/news/news.component';
 import { LoginComponent } from './slider/login/login.component';
 import { RegisterNowComponent } from './slider/register-now/register-now.component';
+import { LandingPageComponent } from './slider/login/landing-page/landing-page.component';
 
 const routes: Routes = [
   {path:'', component:SliderComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
 {path: 'news', component:NewsComponent},
 {path: 'events', component:EventsComponent},
 {path: 'projects', component:ProjectsComponent},
-{path: 'aboutus', component:AboutUsComponent}
+{path: 'aboutus', component:AboutUsComponent},
+{path: 'home', component:LandingPageComponent}
 
 ];
 

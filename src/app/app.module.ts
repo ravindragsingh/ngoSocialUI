@@ -12,6 +12,7 @@ import { EventsComponent } from './slider/events/events.component';
 import { NewsComponent } from './slider/news/news.component';
 import { LoginComponent } from './slider/login/login.component';
 import { RegisterNowComponent } from './slider/register-now/register-now.component';
+import { LandingPageComponent } from './slider/login/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RegisterNowComponent } from './slider/register-now/register-now.compone
     EventsComponent,
     NewsComponent,
     LoginComponent,
-    RegisterNowComponent
+    RegisterNowComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
