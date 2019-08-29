@@ -40,16 +40,17 @@
                 <div class="well tile3">
                     <h3>Available Charities</h3>
                     <br>
-                    <h5>Select the charities available to see the details about them. While donating the money you'll have the option to opt for "Backing out" - Select the option to withdraw the unsed money.</h5>
+                    <h6>Select the charities available to see the details about them. While donating the money you'll have the option to opt for "Backing out" - Select the option to withdraw the unsed money.</h6>
                 </div>
                 <div class="row">
                     <div class="col-sm-3">
                         <div class="well tile2">
                             <h3>
-                                <fa style="font-size: 25px;" name="tree"></fa> AMAZONIA</h3>
+                                <fa style="font-size: 25px;" name="tree"></fa> {{responseProject.data.msg.ProjectName}}</h3>
                             <!-- <p>Living Beings/Area Impacted: Unknown/Amazon Rain Forest</p> -->
-                            <p>Target: $800,000</p>
-                            <p>Current Status: In progress</p>
+                            <p>Target: ${{responseProject.data.msg.ExpectedMoney}}</p>
+                            <p>Current Status: {{responseProject.data.msg.ProjectStatus}}</p>
+                            <p class="card-text">Collected Money : ${{responseProject.data.msg.CollectedMoney}}</p>
                             <p>Audit/Reliability Rating: 5</p>
                             <p>Category : Nature</p>
 
@@ -80,7 +81,7 @@
                     <div class="col-sm-3">
                         <div class="well tile1">
                             <h4>
-                                <fa style="font-size: 25px;" name="wpexplorer"></fa> Support Johnson Family </h4>
+                                <fa style="font-size: 25px;" name="eercast"></fa> Support Johnson Family </h4>
                             <!-- <p>Living Beings/Area Impacted: Unknown/Amazon Rain Forest</p> -->
                             <p>Target: $80,000</p>
                             <p>Current Status: In progress</p>
@@ -93,7 +94,7 @@
                     <div class="col-sm-4">
                         <div class="well tile2">
                             <h4>
-                                <fa style="font-size: 25px;" name="wpexplorer"></fa> Soccer Shoes for Nova </h4>
+                                <fa style="font-size: 25px;" name="futbol-o"></fa> Soccer Shoes for Nova </h4>
                             <!-- <p>Living Beings/Area Impacted: Unknown/Amazon Rain Forest</p> -->
                             <p>Target: $100</p>
                             <p>Current Status: In progress</p>
@@ -115,7 +116,7 @@
                     <div class="col-sm-4">
                         <div class="well tile4">
                             <h4>
-                                <fa style="font-size: 25px;" name="wpexplorer"></fa> Veteran Support Charity, Cumberland County </h4>
+                                <fa style="font-size: 25px;" name="universal-access"></fa> Veteran Support Charity, Cumberland County </h4>
                             <!-- <p>Living Beings/Area Impacted: Unknown/Amazon Rain Forest</p> -->
                             <p>Target: $700,000</p>
                             <p>Current Status: In progress</p>
