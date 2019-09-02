@@ -1,129 +1,189 @@
-<nav class="navbar navbar-inverse visible-xs">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button> -->
-            <a class="navbar-brand" href="#">Logo</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <!-- <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Dashboard</a></li>
-                <li><a href="#">Age</a></li>
-                <li><a href="#">Gender</a></li>
-                <li><a href="#">Geo</a></li>
-            </ul> -->
-        </div>
-    </div>
-</nav>
+<!--Navbar -->
+
+<!--/.Navbar -->
+<h3 class="headerText navbar text-center">Welcome Surendra
+
+</h3>
 <div class="image">
     <div class="container-fluid">
         <div class="row content">
-            <div class="col-sm-3 sidenav hidden-xs">
-                <div style="font-size: 40px;">
+            <div class="col-sm-3 sidenav hidden-xs leftBar">
+                <div class="text-white" style="font-size: 40px;">
                     <fa name="snowflake-o" animation="spin"></fa> moneyTrail
                 </div>
-                <ul class="nav nav-pills nav-stacked">
-                    <!-- <li class="active"><a href="#section1">Dashboard</a></li>
+                <br>
+                <!-- <ul class="nav nav-pills nav-stacked"> -->
+                <!-- <li class="active"><a href="#section1">Dashboard</a></li>
                     <li><a href="#section2">Age</a></li>
                     <li><a href="#section3">Gender</a></li>
                     <li><a href="#section3">Geo</a></li> -->
-                    <button class="btn btn-primary btnMargin btn-space">Your Donations</button>
-                    <button class="btn btn-primary btnMargin btn-space">Wallet</button>
-                </ul><br>
+                <div style="font-size: 18px;" class="badge badge-light"> Your Donations</div>
+                <!-- <button class="btn btn-dark btnMargin btn-space">Your Donations</button> -->
+                <br>
+                <br>
+                <div>
+                    <table class="table table-sm ">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Charity</th>
+                                <th scope="col">$ Donated</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>AMOZANIA</td>
+                                <td>{{responseDonor.data.msg.TotalMoneyDonated}}</td>
+                                <td><button>In Progress</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>DoNation</td>
+                                <td>$900</td>
+                                <td><button>In Progress</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Dreamers</td>
+                                <td>$1200</td>
+                                <td><button>Completed</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <!-- <button class="btn btn-primary btnMargin btn-space">Wallet</button> -->
+                <!-- </ul><br> -->
+                <div>
+                    <a routerLink=""><button class="btn btn-light btnMargin ">Logout</button> </a>
+                </div>
             </div>
             <br>
 
             <div class="col-sm-9 ">
                 <div class="well tile3">
-                    <h3>Available Charities</h3>
-                    <br>
-                    <h6>Select the charities available to see the details about them. While donating the money you'll have the option to opt for "Backing out" - Select the option to withdraw the unsed money.</h6>
+                    <h3 class="text-center">Available Charities</h3>
+                    <!-- <br> -->
+                    <!-- <p class="text-center">Select the charities available to see the details about them. While donating the money you'll have the option to opt for "Backing out" - Select the option to withdraw the unsed money.</p> -->
                 </div>
+                <br>
                 <div class="row">
-                    <div class="col-sm-3">
-                        <div class="well tile2">
-                            <h3>
-                                <fa style="font-size: 25px;" name="tree"></fa> {{responseProject.data.msg.ProjectName}}</h3>
+                    <div class="col-sm-3 " routerLink="/details">
+                        <div class="well ">
+                            <h5 class="card-header">
+                                <fa style="font-size: 26px;" name="tree"></fa> {{responseProject.data.msg.ProjectName}}</h5>
+                            <div class="tile2">
+                                <li>Target: ${{responseProject.data.msg.ExpectedMoney}}</li>
+                                <li>Current Status: {{responseProject.data.msg.ProjectStatus}}</li>
+                                <li>Collected Money : ${{responseProject.data.msg.CollectedMoney}}</li>
+                                <li>Audit/Reliability Rating: 5</li>
+                                <p>Category : Nature</p>
+
+                            </div>
                             <!-- <p>Living Beings/Area Impacted: Unknown/Amazon Rain Forest</p> -->
-                            <p>Target: ${{responseProject.data.msg.ExpectedMoney}}</p>
-                            <p>Current Status: {{responseProject.data.msg.ProjectStatus}}</p>
-                            <p class="card-text">Collected Money : ${{responseProject.data.msg.CollectedMoney}}</p>
-                            <p>Audit/Reliability Rating: 5</p>
-                            <p>Category : Nature</p>
 
                         </div>
                     </div>
-                    <div class="col-sm-3">
-                        <div class="well tile1">
-                            <h4>
-                                <fa style="font-size: 25px;" name="child"></fa> Children Mental Health School </h4>
-                            <!-- <p>Living Beings/Area Impacted: Unknown/Amazon Rain Forest</p> -->
-                            <p>Target: $100,00</p>
-                            <p>Current Status: In progress</p>
-                            <p>Audit/Reliability Rating: 4</p>
-                            <p>Category : Children</p>
+                    <div class="col-sm-3 ">
+                        <div class="well ">
+                            <!-- <div class="card text-white bg-primary mb-3" style="max-width: 18rem;"> -->
+                            <!-- <div class="card-header">Header</div> -->
+                            <h5 class="card-header">
+                                <fa style="font-size: 25px;" name="child"></fa> Children Mental Health School </h5>
+                            <div class="tile1">
+
+                                <!-- <h5 class="card-title">Primary card title</h5> -->
+                                <li>Target: $10,000</li>
+                                <li>Current Status: In progress</li>
+                                <li>Audit/Reliability Rating: 4</li>
+                                <li>Collect Money : $35,000</li>
+                                <p>Category : Children</p>
+                            </div>
+                            <!-- </div> -->
                         </div>
                     </div>
+
                     <div class="col-sm-3">
-                        <div class="well tile4">
-                            <h4>
-                                <fa style="font-size: 25px;" name="handshake-o"></fa> ActionAid USA </h4>
+                        <div class="well">
+                            <h5 class="card-header ">
+                                <fa style="font-size: 25px; " name="handshake-o "></fa> ActionAid USA </h5>
                             <!-- <p>Living Beings/Area Impacted: Unknown/Amazon Rain Forest</p> -->
-                            <p>Target: $900,000</p>
-                            <p>Current Status: In progress</p>
-                            <p>Audit/Reliability Rating: 2.5</p>
-                            <p>Category : General</p>
+                            <div class="tile3 ">
+                                <li>Target: $900,000</li>
+                                <li>Current Status: In progress</li>
+                                <li>Audit/Reliability Rating: 2.5</li>
+                                <li>Collect Money : $75,000</li>
+                                <p>Category : General</p>
+                            </div>
+
+
                         </div>
                     </div>
-                    <div class="col-sm-3">
-                        <div class="well tile1">
-                            <h4>
-                                <fa style="font-size: 25px;" name="eercast"></fa> Support Johnson Family </h4>
+                    <div class="col-sm-3 ">
+                        <div class="well">
+                            <h5 class="card-header">
+                                <fa style="font-size: 25px; " name="eercast "></fa> Support Johnson Family </h5>
                             <!-- <p>Living Beings/Area Impacted: Unknown/Amazon Rain Forest</p> -->
-                            <p>Target: $80,000</p>
-                            <p>Current Status: In progress</p>
-                            <p>Audit/Reliability Rating: 2</p>
-                            <p>Category : General</p>
+                            <div class="tile4">
+                                <li>Target: $80,000</li>
+                                <li>Current Status: In progress</li>
+                                <li>Audit/Reliability Rating: 2</li>
+                                <li>Collect Money : $15,000</li>
+                                <p>Category : General</p>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="well tile2">
-                            <h4>
-                                <fa style="font-size: 25px;" name="futbol-o"></fa> Soccer Shoes for Nova </h4>
+                <div class="row ">
+                    <div class="col-sm-4 ">
+                        <div class="well">
+                            <h5 class="card-header">
+                                <fa style="font-size: 25px; " name="futbol-o "></fa> Soccer Shoes for Nova </h5>
                             <!-- <p>Living Beings/Area Impacted: Unknown/Amazon Rain Forest</p> -->
-                            <p>Target: $100</p>
-                            <p>Current Status: In progress</p>
-                            <p>Audit/Reliability Rating: 2</p>
-                            <p>Category : General</p>
+                            <div class="tile1">
+                                <li>Target: $100</li>
+                                <li>Current Status: In progress</li>
+                                <li>Audit/Reliability Rating: 2</li>
+                                <li>Collect Money : $50</li>
+                                <li>Category : General</li>
+                            </div>
+
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="well tile3">
-                            <h4>
-                                <fa style="font-size: 25px;" name="wpexplorer"></fa> Cancer Help Illinois </h4>
+                    <div class="col-sm-4 ">
+                        <div class="well ">
+                            <h5 class="card-header">
+                                <fa style="font-size: 25px; " name="wpexplorer "></fa> Cancer Help Illinois </h5>
                             <!-- <p>Living Beings/Area Impacted: Unknown/Amazon Rain Forest</p> -->
-                            <p>Target: $1,000,000</p>
-                            <p>Current Status: In progress</p>
-                            <p>Audit/Reliability Rating: 4</p>
-                            <p>Category : Health</p>
+                            <div class="tile2">
+                                <li>Target: $1,000,000</li>
+                                <li>Current Status: In progress</li>
+                                <li>Audit/Reliability Rating: 4</li>
+                                <li>Collect Money : $75,000</li>
+                                <p>Category : Health</p>
+                            </div>
+
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="well tile4">
-                            <h4>
-                                <fa style="font-size: 25px;" name="universal-access"></fa> Veteran Support Charity, Cumberland County </h4>
+                    <div class="col-sm-4 ">
+                        <div class="well">
+                            <h5 class="card-header">
+                                <fa style="font-size: 25px; " name="universal-access "></fa> Veteran Support Charity, Cumberland County </h5>
                             <!-- <p>Living Beings/Area Impacted: Unknown/Amazon Rain Forest</p> -->
-                            <p>Target: $700,000</p>
-                            <p>Current Status: In progress</p>
-                            <p>Audit/Reliability Rating:3.5</p>
-                            <p>Category : General</p>
+                            <div class="tile3">
+                                <li>Target: $700,000</li>
+                                <li>Current Status: In progress</li>
+                                <li>Audit/Reliability Rating:3.5</li>
+                                <li>Collect Money : $80,000</li>
+                                <p>Category : General</p>
+                            </div>
+
                         </div>
                     </div>
+
                 </div>
 
             </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClientModule, HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { Router,ActivatedRoute  } from '@angular/router';
+import { Router,ActivatedRoute,NavigationExtras  } from '@angular/router';
+
 
 @Component({
   selector: 'app-landing-page',
@@ -54,5 +55,9 @@ export class LandingPageComponent implements OnInit {
        }
       );
   }
+
+  // charityDetail() {
+  //   this.route.navigate(['/details', { charity :this.responseProject.data.msg.ProjectName}]);
+  // }
 
 }

@@ -1,0 +1,54 @@
+<h3 class="headerText navbar text-center" style="font-size: 40px;">
+    <fa name="snowflake-o" animation="spin"></fa> moneyTrail</h3>
+<!-- <div class="text-white" style="font-size: 40px;">
+    <fa name="snowflake-o" animation="spin"></fa> moneyTrail
+</div> -->
+<h5 class="card-header">
+    <fa style="font-size: 30px;" name="tree"></fa> {{responseProject.data.msg.ProjectName}} </h5>
+<div class="row">
+
+    <div class="col-sm-7 ">
+        <div class="well ">
+            <h5 class="card-header textOutline">
+                About</h5>
+            <p class="textOutline">The Amazon rainforest is on fire. Some reports suggest that as many as 9,000 new wildfires have started in the rainforest over the last week. And, while forest fires in the Amazon are not a new phenomenon, the number of fires currently burning
+                and affected land area are unprecedented. The Amazon produces 20% of the Earth’s oxygen. Not only do the wildfires threaten to disrupt our production of oxygen and Earth’s delicate elemental balance, but they are also affecting countless
+                groups of indigenous people and endangering the rainforest’s rich biodiversity. While it can be difficult to know exactly how to help, Charity Navigator believes donors should feel confident supporting these highly-rated organizations.
+                All of the charities featured in this list have well-established programs that advocate for the Amazon’s indigenous people groups, as well as responsible land use and forestry. These organizations have confirmed they are raising funds
+                for programs specific to wildfire recovery in the Amazon.</p>
+        </div>
+    </div>
+    <div class="col-sm-4 ">
+        <div class="well ">
+            <h5 class="card-header">
+                Details</h5>
+            <div class="tile2 textOutline">
+                <p>Target: ${{responseProject.data.msg.ExpectedMoney}}</p>
+                <p>Current Status: {{responseProject.data.msg.ProjectStatus}}</p>
+                <p>Collected Money : ${{responseProject.data.msg.CollectedMoney}}</p>
+                <p> Rating:
+                    <fa name="star"></fa>
+                    <fa name="star"></fa>
+                    <fa name="star"></fa>
+                    <fa name="star"></fa>
+                    <fa name="star-half-o"></fa>
+                </p>
+
+                <p>Category : Nature</p>
+                <h6 class="badge badge-light">You can donate</h6>
+                <input required ngModel name="amount" id="amount" type="text" placeholder="Amount to Donate" #amount="ngModel" class="form-control">
+                <input required ngModel name="projectId" id="projectId" type="text" placeholder="Project ID" #projectId="ngModel" class="form-control">
+                <br>
+                <button (click)="donateMoney()">Donate Money</button>
+                <div *ngIf="donMon">
+                    <button class="btn btn-outline-dark header">Approval Status : {{donMon.status}}</button>
+                </div>
+
+            </div>
+            <!-- <p>Living Beings/Area Impacted: Unknown/Amazon Rain Forest</p> -->
+
+        </div>
+    </div>
+
+
+</div>

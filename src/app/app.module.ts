@@ -14,6 +14,9 @@ import { NewsComponent } from './slider/news/news.component';
 import { LoginComponent } from './slider/login/login.component';
 import { RegisterNowComponent } from './slider/register-now/register-now.component';
 import { LandingPageComponent } from './slider/login/landing-page/landing-page.component';
+import { CharityDetailsComponent } from './slider/login/charity-details/charity-details.component';
+import { CompletedCharityComponent } from './slider/login/completed-charity/completed-charity.component';
+import { ChartsModule } from 'ng2-charts/ng2-charts';
 
 @NgModule({
   declarations: [
@@ -25,14 +28,18 @@ import { LandingPageComponent } from './slider/login/landing-page/landing-page.c
     NewsComponent,
     LoginComponent,
     RegisterNowComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    CharityDetailsComponent,
+    CompletedCharityComponent,
+    ChartsModule
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     AngularFontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
