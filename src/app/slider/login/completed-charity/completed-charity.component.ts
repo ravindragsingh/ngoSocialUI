@@ -12,8 +12,8 @@ export class CompletedCharityComponent implements OnInit {
   ngOnInit() {
   }
 
-  public pieChartLabels:string[] = ["Pending", "InProgress", "OnHold", "Complete", "Cancelled"];
-  public pieChartData:number[] = [21, 39, 10, 14, 16];
+  public pieChartLabels:string[] = ["Food", "Blankets", "Shoes", "Clothes", "Books"];
+  public pieChartData:number[] = [2000, 3500,1500, 2000, 1000];
   public pieChartType:string = 'pie';
   public pieChartOptions:any = {'backgroundColor': [
                "#FF6384",

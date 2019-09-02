@@ -16,7 +16,7 @@ import { RegisterNowComponent } from './slider/register-now/register-now.compone
 import { LandingPageComponent } from './slider/login/landing-page/landing-page.component';
 import { CharityDetailsComponent } from './slider/login/charity-details/charity-details.component';
 import { CompletedCharityComponent } from './slider/login/completed-charity/completed-charity.component';
-import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -30,8 +30,7 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     RegisterNowComponent,
     LandingPageComponent,
     CharityDetailsComponent,
-    CompletedCharityComponent,
-    ChartsModule
+    CompletedCharityComponent
   ],
   imports: [
     BrowserModule,
