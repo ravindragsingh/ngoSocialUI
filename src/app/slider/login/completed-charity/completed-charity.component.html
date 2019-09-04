@@ -3,15 +3,16 @@
 <h5 class="card-header">
     <fa style="font-size: 30px;" name="grav"></fa>Dreamerz</h5>
 <div class="row">
-    <div class="col-sm-4 text-center">
-        <h3 class="text-center">Expenditure Details</h3>
+    <div class="col-sm-4 text-center ">
+        <h4 class="text-center ">Expenditure Details</h4>
         <li>Target: $10,000</li>
         <li>Current Status: COMPLETED</li>
 
         <li>Collect Money : $15,000</li>
-        <p>Category : Children</p>
+        <!-- <p>Category : Children</p> -->
 
         <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType" [options]="pieChartOptions" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+
     </div>
     <div class="col-sm-8 ">
         <div class="well ">
@@ -21,15 +22,15 @@
                 online reach of over 4 million and are made up of over 400,000 members as well as 5 statewide branches and over 100 local groups across 28 states. Over 60% of our members are womxn and 20% identify as LGBTQ. We are made up of fearless
                 youth fighting to improve the lives of ourselves, our families and our communities. </p>
         </div>
-        <h5 class="card-header textOutline">
+        <h5 class="card-header  textOutline">
             Donation Details</h5>
 
         <div class="alert alert-primary">
 
             <div class="alert alert-warning">
-                <h6 class="badge badge-danger">You donated $1500, out of which $750 is un-used money and available to withdraw</h6>
-                <li>Surendra donated - $1500 <button>Withdraw</button></li>
-                <h6 class="badge badge-light">Withdraw your available money</h6>
+                <h6 class="badge badge-danger">You donated $1500, out of which $750 is unspent money, and available to withdraw</h6>
+                <li>Surendra donated - $1500 <button class="btn btn-success">Re-Donate</button><button class="btn btn-primary">Withdraw</button></li>
+                <h6 class="badge badge-warning">Choose what to do with your unspent money</h6>
                 <li>Annonymous donated - $1200</li>
                 <li>Prakash donated - $2500</li>
                 <li>Annonymous donated - $1800</li>
